@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SurvivalGame</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="game">
+
+
+<!-- SCREEN-001 START SCREEN -->
+
+<section 
+class="start-screen"
+id="screen-001">
+
+<button
+class="image-start-button"
+id="button-screen-001-01">
+</button>
+
+</section>
+
+
+
+<!-- SCREEN-002 CHARACTER CHOICE -->
+
+<section
+class="character-screen"
+id="screen-002">
+
+
+<button
+class="character-hotspot boy-hotspot"
+id="button-screen-002-01">
+</button>
+
+
+<button
+class="character-hotspot girl-hotspot"
+id="button-screen-002-02">
+</button>
+
+
+</section>
+
+
+
+
+<!-- SCREEN-003 CHARACTER INTRO START -->
+
+<section
+class="intro-character-screen"
+id="screen-003">
+
+
+<img
+id="intro-character-image"
+src="graphics/man Start.png"
+alt="Selected character">
+
+
+<button
+class="character-start-button"
+id="button-screen-003-01">
+</button>
+
+
+</section>
+
+
+
+
+<!-- SCREEN-004 CHARACTER INTRO RESULT -->
+
+<section
+class="final-character-screen"
+id="screen-004">
+
+
+<img
+id="final-character-image"
+src="graphics/man1.png"
+alt="Final character">
+
+
+<button
+class="final-character-next-button"
+id="button-screen-004-01">
+</button>
+
+
+</section>
+
+
+
+
+<!-- SCREEN-005 LOCATION MAP -->
+
+<section
+class="location-screen"
+id="screen-005">
+
+
+<button
+class="location-hotspot location-1"
+id="button-screen-005-01">
+</button>
+
+
+<button
+class="location-hotspot location-2"
+id="button-screen-005-02">
+</button>
+
+
+<button
+class="location-hotspot location-3"
+id="button-screen-005-03">
+</button>
+
+
+<button
+class="location-hotspot location-4"
+id="button-screen-005-04">
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+<!--
+
+GAME LOGIC:
+
+game.js handles:
+
+BUTTON ACTION
+
+GAME STATE changes
+
+SCREEN transitions
+
+-->
+
+
+<!--
+=================================================
+
+SCREEN-006
+
+COCONUT GROVE INTRO
+
+
+ASSET:
+
+LOCAL COCONUT intro.png
+
+
+BUTTON:
+
+button-screen-006-01
+
+
+STATE READ:
+
+gameState.character
+
+gameState.location
+
+
+OUTPUT:
+
+SCREEN-010
+
+
+=================================================
+-->
+
+<section
+class="location-scene-screen"
+id="screen-006">
+
+
+<img
+
+src="graphics/LOCAL COCONUT intro.png"
+
+alt="Coconut Grove">
+
+
+<button
+
+class="location-next-button"
+
+id="button-screen-006-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+=================================================
+
+SCREEN-007
+
+MOUNTAIN LAKE INTRO
+
+
+ASSET:
+
+LOCAL LAKE intro.png
+
+
+BUTTON:
+
+button-screen-007-01
+
+
+STATE READ:
+
+gameState.character
+
+gameState.location
+
+
+OUTPUT:
+
+SCREEN-010
+
+
+=================================================
+-->
+
+<section
+class="location-scene-screen"
+id="screen-007">
+
+
+<img
+
+src="graphics/LOCAL LAKE intro.png"
+
+alt="Mountain Lake">
+
+
+<button
+
+class="location-next-button"
+
+id="button-screen-007-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+=================================================
+
+SCREEN-008
+
+BAMBOO GROVE INTRO
+
+
+ASSET:
+
+LOCAL BAMBOO intro.png
+
+
+BUTTON:
+
+button-screen-008-01
+
+
+STATE READ:
+
+gameState.character
+
+gameState.location
+
+
+OUTPUT:
+
+SCREEN-010
+
+
+=================================================
+-->
+
+<section
+class="location-scene-screen"
+id="screen-008">
+
+
+<img
+
+src="graphics/LOCAL BAMBOO intro.png"
+
+alt="Bamboo Grove">
+
+
+<button
+
+class="location-next-button"
+
+id="button-screen-008-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+=================================================
+
+SCREEN-009
+
+BANANA PLANTATION INTRO
+
+
+ASSET:
+
+LOCAL BANANA intro.png
+
+
+BUTTON:
+
+button-screen-009-01
+
+
+STATE READ:
+
+gameState.character
+
+gameState.location
+
+
+OUTPUT:
+
+SCREEN-010
+
+
+=================================================
+-->
+
+<section
+class="location-scene-screen"
+id="screen-009">
+
+
+<img
+
+src="graphics/LOCAL BANANA intro.png"
+
+alt="Banana Plantation">
+
+
+<button
+
+class="location-next-button"
+
+id="button-screen-009-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+=================================================
+
+SCREEN-010
+
+LOCATION CHARACTER RESULT
+
+
+ASSET:
+
+selected by:
+
+gameState.location
+
++
+
+gameState.character
+
+
+BUTTON:
+
+button-screen-010-01
+
+
+OUTPUT:
+
+SCREEN-011
+
+
+=================================================
+-->
+
+<section
+class="location-scene-screen"
+id="screen-010">
+
+
+<img
+id="location-character-image"
+src=""
+alt="Location character">
+
+
+<button
+
+class="location-next-button"
+
+id="button-screen-010-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+=================================================
+
+SCREEN-011
+
+FIRST SURVIVAL EVENT
+
+
+ASSET:
+
+background_day0
+
+
+FILE:
+
+graphics/fon day0.png
+
+
+BUTTON:
+
+button-screen-011-01
+
+
+STATE READ:
+
+gameState.character
+
+gameState.location
+
+gameState.day
+
+
+STATE WRITE:
+
+gameState.day
+
+
+OUTPUT:
+
+SCREEN-012
+
+
+=================================================
+-->
+
+
+
+<section
+class="location-scene-screen"
+id="screen-011">
+
+
+<img
+
+src="graphics/fon day0.png"
+
+alt="Day 0 Story Intro">
+
+
+<button
+
+class="location-next-button"
+
+id="button-screen-011-01">
+
+</button>
+
+
+</section>
+
+
+
+<!-- SCREEN-012 DAY 1 CHOOSE ITEMS -->
+
+<section
+class="day1-screen"
+id="screen-012">
+
+<img
+src="graphics/fon day1.png"
+alt="Day 1">
+
+<button
+class="item-selection-button"
+id="button-screen-012-01">
+</button>
+
+</section>
+
+
+
+
+<!-- SCREEN-013 ITEM SELECTION -->
+
+
+<section
+class="item-selection-screen"
+id="screen-013">
+
+
+<img
+id="item-character-image"
+src=""
+alt="Choose items">
+
+
+
+
+
+
+<!-- FIRST AID KIT SELECT BUTTON -->
+
+
+<!-- =========================================
+ITEM HOTSPOTS
+SCREEN-013
+
+VIEW + SELECT
+ALL ITEMS
+========================================= -->
+
+
+<!-- HEADLAMP -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="headlamp"
+id="button-item-headlamp-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="headlamp"
+id="button-item-headlamp-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- FISHING ROD -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="fishing_rod"
+id="button-item-fishing_rod-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="fishing_rod"
+id="button-item-fishing_rod-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- FIRST AID KIT -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="first_aid_kit"
+id="button-item-first_aid_kit-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="first_aid_kit"
+id="button-item-first_aid_kit-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- PISTOL -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="pistol"
+id="button-item-pistol-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="pistol"
+id="button-item-pistol-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- MOBILE PHONE -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="mobile_phone"
+id="button-item-mobile_phone-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="mobile_phone"
+id="button-item-mobile_phone-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- WARM SWEATER -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="warm_sweater"
+id="button-item-warm_sweater-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="warm_sweater"
+id="button-item-warm_sweater-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- MACHETE -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="machete"
+id="button-item-machete-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="machete"
+id="button-item-machete-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- COFFEE CUP -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="coffee_cup"
+id="button-item-coffee_cup-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="coffee_cup"
+id="button-item-coffee_cup-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- TENT -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="tent"
+id="button-item-tent-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="tent"
+id="button-item-tent-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- BEAN CAN -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="bean_can"
+id="button-item-bean_can-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="bean_can"
+id="button-item-bean_can-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- CIGARETTES -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="cigarettes"
+id="button-item-cigarettes-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="cigarettes"
+id="button-item-cigarettes-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- RADIO -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="radio"
+id="button-item-radio-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="radio"
+id="button-item-radio-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- SUNSCREEN -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="sunscreen"
+id="button-item-sunscreen-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="sunscreen"
+id="button-item-sunscreen-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- BINOCULARS -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="binoculars"
+id="button-item-binoculars-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="binoculars"
+id="button-item-binoculars-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- BOOK -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="book"
+id="button-item-book-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="book"
+id="button-item-book-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+<!-- TOOTHPASTE -->
+
+<button
+class="item-hotspot item-view-button"
+data-item-id="toothpaste"
+id="button-item-toothpaste-view">
+</button>
+
+
+<button
+class="item-hotspot item-select-button"
+data-item-id="toothpaste"
+id="button-item-toothpaste-select">
+
+<span class="selected-mark">
+✓
+</span>
+
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CONFIRM SELECTED ITEMS -->
+
+<button
+class="location-next-button"
+id="button-screen-013-01">
+</button>
+
+</section>
+
+
+
+<!-- SCREEN-014 ITEM SELECTION RESULT -->
+
+<section
+class="item-result-screen"
+id="screen-014">
+
+
+<img
+id="item-result-character-image"
+src=""
+alt="Items selected">
+
+
+<img class="result-item-icon" id="result-item-1">
+
+<img class="result-item-icon" id="result-item-2">
+
+<img class="result-item-icon" id="result-item-3">
+
+<img class="result-item-icon" id="result-item-4">
+
+
+
+<button
+class="location-next-button"
+id="button-screen-014-01">
+</button>
+
+
+</section>
+
+
+
+<!-- SCREEN-015 UNIVERSAL ITEM INTRO -->
+
+<section
+class="item-intro-screen"
+id="screen-015">
+
+
+<div
+class="item-intro-content">
+
+
+<img
+id="item-intro-image"
+src=""
+alt="Item">
+
+
+<h1
+id="item-intro-name">
+</h1>
+
+
+<p
+id="item-intro-description">
+</p>
+
+
+</div>
+
+
+
+<button
+class="item-intro-back-button"
+id="button-screen-015-back">
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+
+=================================================
+
+SCREEN-016
+
+STORY 1 - DAY 1
+
+=================================================
+
+ASSET:
+
+1storymanday1.png
+
+or
+
+1storygirlday1.png
+
+
+STATE READ:
+
+gameState.currentStory
+
+gameState.character
+
+
+BUTTON:
+
+button-screen-016-01
+
+
+OUTPUT:
+
+NEXT STORY DAY
+
+
+=================================================
+
+-->
+
+<section
+class="story-screen"
+id="screen-016">
+
+
+<img
+id="story-day-image-016"
+src=""
+alt="Story Day 1">
+
+
+<button
+
+class="story-next-button"
+
+id="button-screen-016-01">
+
+</button>
+
+
+</section>
+
+
+<!--
+
+=================================================
+
+SCREEN-017
+
+STORY 1 - DAY 2
+
+=================================================
+
+ASSET:
+
+1storymanday2.png
+
+or
+
+1storygirlday2.png
+
+
+BUTTON:
+
+button-screen-017-01
+
+
+=================================================
+
+-->
+
+
+<section
+class="story-screen"
+id="screen-017">
+
+
+<img
+id="story-day-image-017"
+src=""
+alt="Story Day 2">
+
+
+<button
+
+class="story-next-button"
+
+id="button-screen-017-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+
+=================================================
+
+SCREEN-018
+
+STORY 1 - DAY 3
+
+=================================================
+
+ASSET:
+
+1storymanday3.png
+
+or
+
+1storygirlday3.png
+
+
+BUTTON:
+
+button-screen-018-01
+
+
+=================================================
+
+-->
+
+
+<section
+class="story-screen"
+id="screen-018">
+
+
+<img
+id="story-day-image-018"
+src=""
+alt="Story Day 3">
+
+
+<button
+
+class="story-next-button"
+
+id="button-screen-018-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+
+=================================================
+
+SCREEN-019
+
+STORY 1 - DAY 4
+
+=================================================
+
+ASSET:
+
+1storymanday4.png
+
+or
+
+1storygirlday4.png
+
+
+BUTTON:
+
+button-screen-019-01
+
+
+=================================================
+
+-->
+
+
+<section
+class="story-screen"
+id="screen-019">
+
+
+<img
+id="story-day-image-019"
+src=""
+alt="Story Day 4">
+
+
+<button
+
+class="story-next-button"
+
+id="button-screen-019-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+
+=================================================
+
+SCREEN-020
+
+STORY 1 - DAY 5
+
+=================================================
+
+ASSET:
+
+1storymanday5.png
+
+or
+
+1storygirlday5.png
+
+
+BUTTON:
+
+button-screen-020-01
+
+
+=================================================
+
+-->
+
+
+<section
+class="story-screen"
+id="screen-020">
+
+
+<img
+id="story-day-image-020"
+src=""
+alt="Story Day 5">
+
+
+<button
+
+class="story-next-button"
+
+id="button-screen-020-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+
+=================================================
+
+SCREEN-021
+
+STORY 1 - DAY 6
+
+=================================================
+
+ASSET:
+
+1storymanday6.png
+
+or
+
+1storygirlday6.png
+
+
+BUTTON:
+
+button-screen-021-01
+
+
+=================================================
+
+-->
+
+
+<section
+class="story-screen"
+id="screen-021">
+
+
+<img
+id="story-day-image-021"
+src=""
+alt="Story Day 6">
+
+
+<button
+
+class="story-next-button"
+
+id="button-screen-021-01">
+
+</button>
+
+
+</section>
+
+
+
+
+
+<!--
+=================================================
+
+SCREEN-022
+
+ROULETTE EVENT
+
+STORY 1
+
+=================================================
+-->
+
+<section
+class="roulette-screen"
+id="screen-022">
+
+
+<img
+id="roulette-wheel"
+src="Stories/story1/Selectelements/Roulette.png"
+alt="Roulette">
+
+
+<img
+id="roulette-arrow"
+src="Stories/story1/Selectelements/Arrow.png"
+alt="Arrow">
+
+
+<button
+class="roulette-button"
+id="button-screen-022-01">
+</button>
+
+
+</section>
+
+<section
+class="story-screen"
+id="screen-023">
+
+
+<img
+id="story-day-image-023"
+src=""
+alt="Story Day 7 or Day 8">
+
+
+<button
+class="story-next-button"
+id="button-screen-023-01">
+</button>
+
+
+</section>
+
+
+<!-- SCREEN-024 AUTHOR / CONTINUE STORY -->
+
+<section
+class="author-screen"
+id="screen-024">
+
+
+<img
+src="graphics/contactlist.png"
+alt="Author">
+
+
+<button
+class="story-next-button"
+id="button-screen-024-01">
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+=================================================
+
+SCREEN-030
+
+STORY 3 - DAY 1
+
+=================================================
+
+ASSET:
+
+3storymanday1.png
+
+or
+
+3storygirlday1.png
+
+
+STATE READ:
+
+gameState.currentStory
+
+gameState.character
+
+
+BUTTON:
+
+button-screen-030-01
+
+
+OUTPUT:
+
+NEXT STORY DAY
+
+
+=================================================
+
+-->
+
+
+<section
+class="story-screen"
+id="screen-030">
+
+
+<img
+id="story-day-image-030"
+src=""
+alt="Story 3 Day 1">
+
+
+<button
+
+class="story-next-button"
+
+id="button-screen-030-01">
+
+</button>
+
+
+</section>
+
+
+<section
+class="story-screen"
+id="screen-031">
+
+<img
+id="story-day-image-031"
+src=""
+alt="Story 3 Day 2">
+
+<button
+class="story-next-button"
+id="button-screen-031-01">
+
+</button>
+
+</section>
+
+
+
+<section
+class="story-screen"
+id="screen-032">
+
+<img
+id="story-day-image-032"
+src=""
+alt="Story 3 Day 3">
+
+<button
+class="story-next-button"
+id="button-screen-032-01">
+
+</button>
+
+</section>
+
+
+
+<section
+class="story-screen"
+id="screen-033">
+
+<img
+id="story-day-image-033"
+src=""
+alt="Story 3 Day 4">
+
+<button
+class="story-next-button"
+id="button-screen-033-01">
+
+</button>
+
+</section>
+
+
+
+<section
+class="story-screen"
+id="screen-034">
+
+<img
+id="story-day-image-034"
+src=""
+alt="Story 3 Day 5">
+
+<button
+class="story-next-button"
+id="button-screen-034-01">
+
+</button>
+
+</section>
+
+
+
+<section
+class="story-screen"
+id="screen-035">
+
+<img
+id="story-day-image-035"
+src=""
+alt="Story 3 Day 6">
+
+<button
+class="story-next-button"
+id="button-screen-035-01">
+
+</button>
+
+</section>
+
+
+<!-- SCREEN-036 STORY 3 ROULETTE -->
+
+<section
+class="roulette-screen"
+id="screen-036">
+
+
+<img
+id="roulette-wheel-2"
+src="Stories/story3/Selectelements/Roulette.png"
+alt="Roulette">
+
+
+<img
+id="roulette-arrow-2"
+src="Stories/story3/Selectelements/Arrow.png"
+alt="Arrow">
+
+
+<button
+class="roulette-button"
+id="button-screen-036-01">
+</button>
+
+
+</section>
+
+
+
+<!-- SCREEN-037 STORY 2 RESULT -->
+
+<section
+class="story-screen"
+id="screen-037">
+
+
+<img
+id="story-day-image-037"
+src=""
+alt="Story 3 Result">
+
+
+<button
+class="story-next-button"
+id="button-screen-037-01">
+</button>
+
+
+</section>
+
+
+
+
+<!-- SCREEN-038 STORY 2 AUTHOR -->
+
+<section
+class="author-screen"
+id="screen-038">
+
+
+<img
+src="graphics/contactlist.png"
+alt="Author">
+
+
+<button
+class="story-next-button"
+id="button-screen-038-01">
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+=================================================
+
+ITEM SELECT CHECK MARK
+
+Visible only after selection.
+
+Controlled by game.js.
+
+=================================================
+
+-->
+
+
+
+
+
+
+
+</div>
+
+
+
+<script src="stories.js"></script>
+<script src="game.js"></script>
+
+
+</body>
+
+</html>
+
+
+

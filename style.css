@@ -1,0 +1,2410 @@
+/*
+=================================================
+
+SURVIVALGAME
+
+FILE:
+
+style.css
+
+
+RESPONSIBILITY:
+
+ONLY VISUAL SYSTEM.
+
+
+CSS controls:
+
+- size;
+- position;
+- layers;
+- visibility;
+- transparent buttons.
+
+
+CSS DOES NOT CONTROL:
+
+- game state;
+- transitions;
+- story;
+- events;
+- actions.
+
+
+Logic:
+
+game.js
+
+
+=================================================
+*/
+
+
+/*
+=================================================
+
+GLOBAL SCREEN SETTINGS
+
+=================================================
+*/
+
+
+body {
+
+    margin:0;
+    padding:0;
+
+    width:100%;
+    height:100dvh;
+
+    overflow:hidden;
+
+    background:black;
+
+    font-family:Arial,sans-serif;
+
+}
+
+
+
+/*
+=================================================
+
+MAIN GAME CONTAINER
+
+All screens exist inside:
+
+.game
+
+
+=================================================
+*/
+
+
+.game {
+
+    width:100%;
+    height:100dvh;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/*
+=================================================
+
+COMMON SCREEN RULE
+
+Every screen is a layer.
+
+Only one active screen should be visible.
+
+Visibility is controlled by game.js.
+
+=================================================
+*/
+
+
+.screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+}
+
+
+
+/*
+=================================================
+
+SCREEN-001
+
+START SCREEN
+
+
+ASSET:
+
+graphics/fon1.png
+
+
+BUTTON:
+
+button-screen-001-01
+
+
+=================================================
+*/
+
+
+.start-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+
+    background-image:url("graphics/fon1.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+
+}
+
+
+
+/*
+SCREEN-001 BUTTON
+
+
+Transparent interaction zone.
+
+Only sends:
+
+start_game
+
+
+=================================================
+*/
+
+
+.image-start-button {
+
+
+    position:absolute;
+
+    left:50%;
+    top:80%;
+
+
+    transform:translate(-50%,-50%);
+
+
+    width:100%;
+    height:20%;
+
+
+    background:transparent;
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:10;
+
+
+}
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-002
+
+CHARACTER CHOICE
+
+
+ASSET:
+
+graphics/fon2.png
+
+
+BUTTONS:
+
+button-screen-002-01
+
+button-screen-002-02
+
+
+=================================================
+*/
+
+
+.character-screen {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    background-image:url("graphics/fon2.png");
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-repeat:no-repeat;
+
+
+
+}
+
+
+
+/*
+Character selection zones.
+
+
+Buttons are invisible.
+
+Graphic exists only inside PNG.
+
+
+=================================================
+*/
+
+
+.character-hotspot {
+
+
+    position:absolute;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:10;
+
+
+}
+
+
+
+.boy-hotspot {
+
+
+    left:0;
+    top:0;
+
+
+    width:50%;
+    height:100%;
+
+
+}
+
+
+
+.girl-hotspot {
+
+
+    right:0;
+    top:0;
+
+
+    width:50%;
+    height:100%;
+
+
+}
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-003
+
+CHARACTER INTRO START
+
+
+Assets:
+
+graphics/man Start.png
+
+graphics/girl Start.png
+
+
+BUTTON:
+
+button-screen-003-01
+
+
+=================================================
+*/
+
+
+.intro-character-screen {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    background:black;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+    justify-content:center;
+
+
+
+}
+
+
+
+.intro-character-screen img {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    object-fit:cover;
+
+
+
+}
+
+
+
+
+
+.character-start-button {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:20;
+
+
+}
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-004
+
+CHARACTER INTRO RESULT
+
+
+Assets:
+
+graphics/man1.png
+
+graphics/girl1.png
+
+
+BUTTON:
+
+button-screen-004-01
+
+
+=================================================
+*/
+
+
+.final-character-screen {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    background:black;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+    justify-content:center;
+
+
+}
+
+
+
+.final-character-screen img {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+.final-character-next-button {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:20;
+
+
+}
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-005
+
+LOCATION MAP
+
+
+ASSET:
+
+graphics/fon3.png
+
+
+BUTTONS:
+
+button-screen-005-01
+
+button-screen-005-02
+
+button-screen-005-03
+
+button-screen-005-04
+
+
+=================================================
+*/
+
+
+.location-screen {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+
+    background-image:url("graphics/fon3.png");
+
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    background-repeat:no-repeat;
+
+
+}
+
+
+
+
+/*
+Location transparent buttons.
+
+Only ACTION transfer.
+
+
+=================================================
+*/
+
+
+.location-hotspot {
+
+
+    position:absolute;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:20;
+
+
+}
+
+
+
+/*
+COCONUT GROVE
+
+button-screen-005-01
+
+=================================================
+*/
+
+
+.location-1 {
+
+
+    left:35%;
+
+    top:18%;
+
+
+    width:30%;
+
+    height:18%;
+
+
+}
+
+
+
+/*
+MOUNTAIN LAKE
+
+button-screen-005-02
+
+=================================================
+*/
+
+
+.location-2 {
+
+
+    left:15%;
+
+    top:45%;
+
+
+    width:35%;
+
+    height:18%;
+
+
+}
+
+
+
+/*
+BAMBOO GROVE
+
+button-screen-005-03
+
+=================================================
+*/
+
+
+.location-3 {
+
+
+    right:10%;
+
+    top:45%;
+
+
+    width:35%;
+
+    height:18%;
+
+
+}
+
+
+
+/*
+BANANA PLANTATION
+
+button-screen-005-04
+
+=================================================
+*/
+
+
+.location-4 {
+
+
+    left:35%;
+
+    bottom:15%;
+
+
+    width:30%;
+
+    height:18%;
+
+
+}
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-006
+
+SCREEN-007
+
+SCREEN-008
+
+SCREEN-009
+
+
+LOCATION INTRO SCREENS
+
+
+Future screens.
+
+
+Graphics will be connected through:
+
+ASSET REGISTRY.
+
+
+=================================================
+*/
+
+
+.location-scene-screen {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+}
+
+
+/*
+=================================================
+
+LOCATION / STORY SCENE BUTTONS
+
+SCREEN-006
+SCREEN-007
+SCREEN-008
+SCREEN-009
+SCREEN-010
+SCREEN-011
+
+Transparent full-screen interaction zone.
+
+
+Transparent full-screen interaction zone.
+
+=================================================
+*/
+
+.location-next-button {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+    z-index:20;
+
+}
+
+/*
+=================================================
+
+LOCATION IMAGE SYSTEM
+
+SCREEN-006
+SCREEN-007
+SCREEN-008
+SCREEN-009
+SCREEN-010
+
+Image fills the screen.
+
+=================================================
+*/
+
+.location-scene-screen img {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    max-width:96%;
+    max-height:96%;
+
+    width:auto;
+    height:auto;
+
+    transform:translate(-50%, -50%);
+
+}
+
+/*
+=================================================
+
+SCREEN-012
+
+DAY 1 CHOOSE ITEMS
+
+ASSET:
+
+graphics/fon day1.png
+
+BUTTON:
+
+button-screen-012-01
+
+
+=================================================
+*/
+
+
+.day1-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+.day1-screen img {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:translate(-50%, -50%);
+
+}
+
+
+
+
+/*
+=================================================
+
+SCREEN-013
+
+ITEM SELECTION
+
+
+CHARACTER IMAGE:
+
+man2.png
+
+girl2.png
+
+
+BUTTON:
+
+button-screen-013-01
+
+
+=================================================
+*/
+
+
+.item-selection-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+.item-selection-screen img {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    max-width:96%;
+    max-height:96%;
+
+    width:auto;
+    height:auto;
+
+    transform:translate(-50%, -50%);
+
+}
+
+
+
+/*
+=================================================
+
+SCREEN-014
+
+ITEM SELECTION RESULT
+
+
+BUTTON:
+
+button-screen-014-01
+
+
+=================================================
+*/
+
+
+.item-result-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+.item-result-screen > #item-result-character-image {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:translate(-50%,-50%);
+
+}
+
+/*
+=================================================
+
+SCREEN-014
+
+SELECTED ITEM ICONS
+
+
+Controlled by:
+
+game.js
+
+
+=================================================
+*/
+
+
+.result-item-icon {
+
+    position:absolute;
+
+    width:50%;
+
+    height:auto;
+
+    z-index:10;
+
+}
+
+#item-result-character-image {
+
+    z-index:1;
+
+}
+
+
+.result-item-icon {
+
+    z-index:10;
+
+}
+
+
+
+/*
+FOUR SELECTED ITEMS POSITIONS
+*/
+
+
+#result-item-1 {
+
+    left:5%;
+    top:10%;
+
+}
+
+
+#result-item-2 {
+
+    left:5%;
+    top:30%;
+
+}
+
+
+#result-item-3 {
+
+    left:5%;
+    top:50%;
+
+}
+
+
+#result-item-4 {
+
+    left:5%;
+    top:70%;
+
+}
+
+/*
+=================================================
+
+SCREEN-012
+
+DAY 1 CHOOSE ITEMS BUTTON
+
+
+ACTION:
+
+open_item_selection
+
+
+Transparent interaction zone.
+
+=================================================
+*/
+
+
+.item-selection-button {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+    z-index:20;
+
+}
+
+/*
+=================================================
+
+ITEM BUTTON
+
+SCREEN-013
+
+FIRST AID KIT SELECT
+
+Transparent zone.
+
+=================================================
+*/
+
+
+
+
+.item-hotspot {
+
+    position:absolute;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+    z-index:30;
+
+}
+
+
+#button-item-first_aid_kit-select {
+
+
+      left:59%;
+    top:13%;
+
+   width: 9%;
+    height:7%;
+
+
+}
+
+
+
+#button-item-first_aid_kit-view {
+
+     left:59%;
+    top:13%;
+
+    width:9%;
+    height:9%;
+
+background:rgb(5, 187, 219);
+
+opacity:0;
+
+}
+
+
+
+
+/* HEADLAMP */
+
+#button-item-headlamp-select {
+
+left:15%;
+top:13%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-headlamp-view {
+
+left:15%;
+top:13%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* FISHING ROD */
+
+#button-item-fishing_rod-select {
+
+left:35%;
+top:13%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-fishing_rod-view {
+
+left:35%;
+top:13%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* PISTOL */
+
+#button-item-pistol-select {
+
+left:80%;
+top:24%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-pistol-view {
+
+left:80%;
+top:24%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* MOBILE PHONE */
+
+#button-item-mobile_phone-select {
+
+left:80%;
+top:36%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-mobile_phone-view {
+
+left:80%;
+top:36%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* WARM SWEATER */
+
+#button-item-warm_sweater-select {
+
+left:10%;
+top:23%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-warm_sweater-view {
+
+left:10%;
+top:23%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* MACHETE */
+
+#button-item-machete-select {
+
+left:80%;
+top:15%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-machete-view {
+
+left:80%;
+top:15%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* COFFEE CUP */
+
+#button-item-coffee_cup-select {
+
+left:80%;
+top:47%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-coffee_cup-view {
+
+left:80%;
+top:47%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* TENT */
+
+#button-item-tent-select {
+
+left:53%;
+top:70%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-tent-view {
+
+left:53%;
+top:70%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* BEAN CAN */
+
+#button-item-bean_can-select {
+
+left:80%;
+top:58%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-bean_can-view {
+
+left:80%;
+top:58%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* CIGARETTES */
+
+#button-item-cigarettes-select {
+
+left:10%;
+top:58%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-cigarettes-view {
+
+left:10%;
+top:58%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* RADIO */
+
+#button-item-radio-select {
+
+left:10%;
+top:46%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-radio-view {
+
+left:10%;
+top:46%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* SUNSCREEN */
+
+#button-item-sunscreen-select {
+
+left:12%;
+top:68%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-sunscreen-view {
+
+left:12%;
+top:68%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* BINOCULARS */
+
+#button-item-binoculars-select {
+
+left:10%;
+top:35%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-binoculars-view {
+
+left:10%;
+top:35%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* BOOK */
+
+#button-item-book-select {
+
+left:34%;
+top:70%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-book-view {
+
+left:34%;
+top:70%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/* TOOTHPASTE   */
+
+#button-item-toothpaste-select {
+
+left:76%;
+top:68%;
+
+width:9%;
+height:7%;
+
+}
+
+
+#button-item-toothpaste-view {
+
+left:76%;
+top:68%;
+
+width:9%;
+height:9%;
+
+background:rgb(5,187,219);
+
+opacity:0;
+
+}
+
+
+
+/*
+=================================================
+
+SCREEN-015
+
+UNIVERSAL ITEM INTRO
+
+=================================================
+*/
+
+
+.item-intro-screen {
+
+  position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;  
+   
+
+}
+
+
+
+
+
+.item-intro-content {
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+.item-intro-content img {
+
+    max-width:60%;
+
+    max-height:50%;
+
+}
+
+
+.item-intro-content h1 {
+
+    font-size:32px;
+
+}
+
+
+.item-intro-content p {
+
+    font-size:20px;
+
+}
+
+
+
+.item-intro-back-button {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+    z-index:20;
+
+}
+
+/*
+=================================================
+
+SCREEN-015
+
+UNIVERSAL ITEM INTRO
+
+=================================================
+*/
+
+
+.item-intro-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+.item-intro-screen img {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    max-width:100%;
+    max-height:100%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+
+.item-intro-screen h2 {
+
+    position:absolute;
+
+    top:10%;
+    width:100%;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+.item-intro-screen p {
+
+    position:absolute;
+
+    bottom:20%;
+
+    width:100%;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+/*
+=================================================
+
+ITEM SELECT CHECK MARK
+
+Visible only after selection.
+
+Controlled by game.js.
+
+=================================================
+*/
+
+
+.selected-mark {
+
+    display:none;
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:60px;
+
+    color:#00ff00;
+
+    font-weight:bold;
+
+    text-shadow:
+    0 0 10px black;
+
+}
+
+
+
+.item-select-button.selected .selected-mark {
+
+    display:block;
+
+}
+
+.selected-mark{
+
+display:none;
+
+}
+
+
+
+/*
+=================================================
+
+UNIVERSAL ITEM SELECT CHECK MARK
+
+Works with all ITEM IDs.
+
+Controlled by game.js.
+
+=================================================
+*/
+
+
+.item-selected-mark {
+
+    display:none;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    font-size:60px;
+
+
+    color:#00ff00;
+
+
+    font-weight:bold;
+
+
+    text-shadow:
+    0 0 10px black;
+
+}
+
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-016
+
+STORY 1 - DAY 1
+
+ASSET:
+
+1storymanday1.png
+
+1storygirlday1.png
+
+
+BUTTON:
+
+button-screen-016-01
+
+=================================================
+*/
+
+
+.story-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+#story-day-image {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+#story-day-image-016,
+#story-day-image-017,
+#story-day-image-018,
+#story-day-image-019,
+#story-day-image-020,
+#story-day-image-021 {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+
+.story-next-button {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+    z-index:20;
+
+}
+
+#story-day-image-023 {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:
+    translate(-50%,-50%);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-022
+
+ROULETTE
+
+=================================================
+*/
+
+
+.roulette-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+#roulette-wheel {
+
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+
+    width:100%;
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    transform:
+    translate(-50%,-50%);
+
+}
+
+
+
+#roulette-arrow {
+
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+
+    width:35%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    transform-origin:center;
+
+
+}
+
+
+
+.roulette-button {
+
+
+    position:absolute;
+
+
+    top:0;
+    left:0;
+
+
+    width:100%;
+    height:100%;
+
+
+    background:transparent;
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:20;
+
+}
+
+
+
+/*
+ROTATION
+
+Controlled by game.js
+
+*/
+
+
+.spinning {
+
+    animation:
+    rouletteSpin 4s ease-out;
+
+}
+
+
+
+@keyframes rouletteSpin {
+
+
+0% {
+
+transform:
+translate(-50%,-50%)
+rotate(0deg);
+
+}
+
+
+70% {
+
+transform:
+translate(-50%,-50%)
+rotate(1200deg);
+
+}
+
+
+100% {
+
+transform:
+translate(-50%,-50%)
+rotate(1450deg);
+
+}
+
+
+}
+
+
+
+/*
+=================================================
+
+SCREEN-024
+
+AUTHOR SCREEN
+
+=================================================
+*/
+
+
+.author-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+.author-screen img {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:
+    translate(-50%,-50%);
+
+}
+
+
+
+
+
+
+
+
+
+
+/*
+=================================================
+
+SCREEN-030
+
+STORY 2 - DAY 1
+
+ASSET:
+
+2storymanday1.png
+
+2storygirlday1.png
+
+
+
+BUTTON:
+
+ button-screen-030-01
+
+=================================================
+*/
+
+
+.story2-screen {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:black;
+
+}
+
+
+
+
+#story-day-image-030,
+#story-day-image-031,
+#story-day-image-032,
+#story-day-image-033,
+#story-day-image-034,
+#story-day-image-035,
+#story-day-image-037 {
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+
+
+
+.story2-next-button {
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:transparent;
+
+    border:none;
+
+    cursor:pointer;
+
+    z-index:20;
+
+}
+
+
+
+/*
+=================================================
+
+SCREEN-036
+
+STORY 2 ROULETTE
+
+=================================================
+*/
+
+
+#roulette-wheel-2 {
+
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+
+    width:100%;
+    height:100%;
+
+
+    object-fit:cover;
+
+
+    transform:
+    translate(-50%,-50%);
+
+}
+
+
+
+#roulette-arrow-2 {
+
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+
+    width:35%;
+
+
+    transform:
+    translate(-50%,-50%);
+
+
+    transform-origin:center;
+
+}
+
+
+
+
+
+
+
+
+/* DEBUG ITEM HOTSPOT */
+
+.item-hotspot{
+
+    background:transparent;
+
+    opacity:1;
+
+    border:none;
+
+}
+
