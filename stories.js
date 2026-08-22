@@ -115,7 +115,19 @@ STORY_1:{
         "mobile_phone",
         "cigarettes",
         "coffee_cup",
-        "book"
+        "book",
+        "headlamp",
+        "fishing_rod",
+        "first_aid_kit",
+        "pistol",
+        "warm_sweater",
+        "machete",
+        "tent",
+        "bean_can",
+        "radio",
+        "sunscreen",
+        "binoculars",
+        "toothpaste"
 
     ],
 
