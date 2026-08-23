@@ -3481,12 +3481,15 @@ function(){
 
 
 window.open(
-"https://wa.me/34667698657",
+"https://wa.me/34667698657?text=Hola%20Alexander.%0A%0AHe%20probado%20tu%20gu%C3%ADa%20de%20masaje%20y%20me%20ha%20gustado%20mucho.%0A%0AMe%20gustar%C3%ADa%20reservar%20un%20masaje.%0A%0A%C2%BFQu%C3%A9%20horarios%20tienes%20disponibles%3F",
 "_blank"
 );
 
 
 });
+
+
+
 
 
 
