@@ -2239,7 +2239,83 @@ AUTHOR SCREEN
 }
 
 
+/*
+=================================================
 
+SCREEN-024
+
+CONTACT BUTTONS
+
+INSTAGRAM + WHATSAPP
+
+=================================================
+*/
+
+
+.contact-instagram-button,
+.contact-whatsapp-button {
+
+
+    position:absolute;
+
+
+    bottom:4%;
+
+
+    height:10%;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    z-index:50;
+
+
+}
+
+
+
+/*
+INSTAGRAM LEFT BUTTON
+
+=================================================
+*/
+
+.contact-instagram-button {
+
+
+    left:5%;
+
+
+    width:42%;
+
+
+}
+
+
+
+/*
+WHATSAPP RIGHT BUTTON
+
+=================================================
+*/
+
+.contact-whatsapp-button {
+
+
+    right:5%;
+
+
+    width:42%;
+
+
+}
 
 
 

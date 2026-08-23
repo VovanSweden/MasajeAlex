@@ -1083,6 +1083,19 @@ document.getElementById(
 ),
 
 
+instagram:
+document.getElementById(
+"button-screen-024-instagram"
+),
+
+
+whatsapp:
+document.getElementById(
+"button-screen-024-whatsapp"
+),
+
+
+
 
 
 
@@ -3432,6 +3445,48 @@ screens.screen001
 
 
 
+
+
+
+
+/*
+=================================================
+
+SCREEN-024
+
+CONTACT BUTTONS
+
+=================================================
+*/
+
+
+buttons.instagram.addEventListener(
+"click",
+function(){
+
+
+window.open(
+"https://www.instagram.com/masaje.alex.vlc/",
+"_blank"
+);
+
+
+});
+
+
+
+buttons.whatsapp.addEventListener(
+"click",
+function(){
+
+
+window.open(
+"https://wa.me/34667698657",
+"_blank"
+);
+
+
+});
 
 
 
