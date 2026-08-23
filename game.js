@@ -2374,7 +2374,7 @@ function(){
 
 
 if(
-gameState.selectedItems.length !== 0
+gameState.selectedItems.length  < 0
 ){
 
 return;
