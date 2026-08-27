@@ -1,7 +1,7 @@
 /*
 ====================================================
 
-                STORY  DATABASE SYSTEM
+                STORY DATABASE SYSTEM
 
                 File: stories.js
 
