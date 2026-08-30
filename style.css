@@ -2484,3 +2484,40 @@ STORY 2 ROULETTE
 
 }
 
+/* =================================================
+DESKTOP VIEW
+
+On desktop the mobile game stays in 9:16 format
+and is centered on the screen.
+
+Mobile version is not changed.
+================================================= */
+
+@media (min-width: 768px) {
+
+    body {
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
+
+        background:black;
+
+    }
+
+
+    .game {
+
+        width:min(430px, calc(100dvh * 9 / 16));
+
+        height:auto;
+
+        aspect-ratio:9 / 16;
+
+        flex-shrink:0;
+
+    }
+
+}
